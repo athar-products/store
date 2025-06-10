@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إتمام الشراء</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -12,7 +13,7 @@
     <header class="main-header">
         <div class="logo-name">
             <img src="images/logo.jpg" alt="شعار المتجر" class="logo">
-            <span class="store-name">متجري</span>
+            <span class="store-name">QUDWAH</span>
         </div>
         <nav class="main-nav">
             <ul class="nav-links">
@@ -33,79 +34,131 @@
     </header>
 
     <main class="checkout-page">
-        <h1>إتمام الشراء</h1>
-        
         <div class="checkout-container">
-            <form id="checkoutForm" class="checkout-form">
-                <div class="form-section">
-                    <h2>معلومات الزبون</h2>
+            <form id="checkoutForm">
+                <section class="form-section">
+                    <h2>معلومات العميل</h2>
                     <div class="form-group">
-                        <label for="fullName">الاسم الكامل:</label>
-                        <input type="text" id="fullName" name="fullName" required>
+                        <label for="firstName">الاسم و اللقب:</label>
+                        <input type="text" id="firstName" name="firstName" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">رقم الهاتف:</label>
                         <input type="tel" id="phone" name="phone" required>
                     </div>
                     <div class="form-group">
-                        <label for="secondaryPhone">رقم هاتف احتياطي (اختياري):</label>
+                        <label for="secondaryPhone">رقم احتياطي (اختياري):</label>
                         <input type="tel" id="secondaryPhone" name="secondaryPhone">
                     </div>
-                </div>
+                </section>
 
-                <div class="form-section">
-                    <h2>معلومات التوصيل</h2>
+                <section class="form-section">
+                    <h2>عنوان التوصيل</h2>
                     <div class="form-group">
-                        <label for="state">الولاية:</label>
-                        <select id="state" name="state" required>
+                        <label for="wilaya">الولاية:</label>
+                        <select id="wilaya" name="wilaya" required>
                             <option value="">اختر الولاية</option>
-                            <!-- سيتم ملؤها بالجافاسكربت -->
+                            <option value="Adrar">أدرار</option>
+                            <option value="Chlef">الشلف</option>
+                            <option value="Laghouat">الأغواط</option>
+                            <option value="Oum El Bouaghi">أم البواقي</option>
+                            <option value="Batna">باتنة</option>
+                            <option value="Bejaia">بجاية</option>
+                            <option value="Biskra">بسكرة</option>
+                            <option value="Bechar">بشار</option>
+                            <option value="Blida">البليدة</option>
+                            <option value="Bouira">البويرة</option>
+                            <option value="Tamanrasset">تمنراست</option>
+                            <option value="Tebessa">تبسة</option>
+                            <option value="Tlemcen">تلمسان</option>
+                            <option value="Tiaret">تيارت</option>
+                            <option value="Tizi Ouzou">تيزي وزو</option>
+                            <option value="Alger">الجزائر</option>
+                            <option value="Djelfa">الجلفة</option>
+                            <option value="Jijel">جيجل</option>
+                            <option value="Sétif">سطيف</option>
+                            <option value="Saida">سعيدة</option>
+                            <option value="Skikda">سكيكدة</option>
+                            <option value="Sidi Bel Abbès">سيدي بلعباس</option>
+                            <option value="Annaba">عنابة</option>
+                            <option value="Guelma">قالمة</option>
+                            <option value="Constantine">قسنطينة</option>
+                            <option value="Medea">المدية</option>
+                            <option value="Mostaganem">مستغانم</option>
+                            <option value="M'Sila">المسيلة</option>
+                            <option value="Mascara">معسكر</option>
+                            <option value="Ouargla">ورقلة</option>
+                            <option value="Oran">وهران</option>
+                            <option value="El Bayadh">البيض</option>
+                            <option value="Illizi">إيليزي</option>
+                            <option value="Bordj Bou Arreridj">برج بوعريريج</option>
+                            <option value="Boumerdes">بومرداس</option>
+                            <option value="El Tarf">الطارف</option>
+                            <option value="Tindouf">تندوف</option>
+                            <option value="Tissemsilt">تيسمسيلت</option>
+                            <option value="El Oued">الوادي</option>
+                            <option value="Khenchela">خنشلة</option>
+                            <option value="Souk Ahras">سوق أهراس</option>
+                            <option value="Tipaza">تيبازة</option>
+                            <option value="Mila">ميلة</option>
+                            <option value="Ain Defla">عين الدفلى</option>
+                            <option value="Naama">النعامة</option>
+                            <option value="Ain Temouchent">عين تموشنت</option>
+                            <option value="Ghardaia">غرداية</option>
+                            <option value="Relizane">غليزان</option>
+                            <option value="Timimoun">تيميمون</option>
+                            <option value="Bordj Badji Mokhtar">برج باجي مختار</option>
+                            <option value="Ouled Djellal">أولاد جلال</option>
+                            <option value="Béni Abbès">بني عباس</option>
+                            <option value="In Salah">عين صالح</option>
+                            <option value="In Guezzam">عين قزام</option>
+                            <option value="Touggourt">تقرت</option>
+                            <option value="Djanet">جانت</option>
+                            <option value="M'Ghair">المغير</option>
+                            <option value="Meniaa">المنيعة</option>
                         </select>
                     </div>
 
-                    <div class="delivery-options" id="deliveryOptions" style="display: none;">
+                    <div class="radio-group">
                         <label>طريقة التوصيل:</label>
-                        <div class="radio-group">
-                            <label>
-                                <input type="radio" name="deliveryType" value="office" checked>
-                                التوصيل إلى المكتب
-                            </label>
-                            <label>
-                                <input type="radio" name="deliveryType" value="home">
-                                التوصيل إلى المنزل
-                            </label>
-                        </div>
+                        <label>
+                            <input type="radio" name="deliveryMethod" value="home" checked>
+                            التوصيل إلى المنزل
+                        </label>
+                        <label>
+                            <input type="radio" name="deliveryMethod" value="office">
+                            التوصيل إلى مكتب البريد
+                        </label>
+                    </div>
 
-                        <div class="home-delivery-details" id="homeDeliveryDetails" style="display: none;">
-                            <div class="form-group">
-                                <label for="town">البلدية:</label>
-                                <input type="text" id="town" name="town">
-                            </div>
-                            <div class="form-group">
-                                <label for="areaDescription">وصف المنطقة:</label>
-                                <textarea id="areaDescription" name="areaDescription" rows="3"></textarea>
-                            </div>
+                    <div id="homeDeliveryFields">
+                        <div class="form-group">
+                            <label for="commune">البلدية:</label>
+                            <input type="text" id="commune" name="commune" required>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div class="form-section">
+                <section class="form-section">
                     <h2>ملخص الطلب</h2>
                     <div class="order-summary">
-                        <div class="summary-row">
-                            <span>المجموع:</span>
-                            <span id="orderSubtotal">0 د.ج</span>
+                        <div id="orderItems">
+                            <!-- سيتم ملؤها بالجافاسكربت -->
                         </div>
                         <div class="summary-row">
-                            <span>سعر التوصيل:</span>
+                            <span>المجموع الجزئي:</span>
+                            <span id="subtotal">0 د.ج</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>تكلفة التوصيل:</span>
                             <span id="deliveryCost">0 د.ج</span>
                         </div>
                         <div class="summary-row total">
                             <span>المجموع الكلي:</span>
-                            <span id="orderTotal">0 د.ج</span>
+                            <span id="total">0 د.ج</span>
                         </div>
                     </div>
-                </div>
+                </section>
 
                 <button type="submit" class="submit-order-btn">تأكيد الطلب</button>
             </form>
@@ -113,159 +166,243 @@
     </main>
 
     <script src="script.js"></script>
-<script>
-    // بيانات الولايات وأسعار التوصيل (محدثة حسب مدخلاتك)
-    const statesData = {
-        "Adrar": { home: 1450, office: 1070 },
-        "Chlef": { home: 850, office: 570 },
-        "Laghouat": { home: 950, office: 670 },
-        "Oum El Bouaghi": { home: 800, office: 570 },
-        "Batna": { home: 900, office: 570 },
-        "Bejaia": { home: 900, office: 570 },
-        "Biskra": { home: 950, office: 670 },
-        "Bechar": { home: 1200, office: 770 },
-        "Blida": { home: 700, office: 520 },
-        "Bouira": { home: 750, office: 570 },
-        "Tamanrasset": { home: 1650, office: 1270 },
-        "Tebessa": { home: 950, office: 570 },
-        "Tlemcen": { home: 900, office: 570 },
-        "Tiaret": { home: 850, office: 520 },
-        "Tizi Ouzou": { home: 750, office: 570 },
-        "Alger": { home: 600, office: 520 },
-        "Djelfa": { home: 950, office: 670 },
-        "Jijel": { home: 900, office: 570 },
-        "Sétif": { home: 850, office: 570 },
-        "Saida": { home: 900, office: 620 },
-        "Skikda": { home: 900, office: 570 },
-        "Sidi Bel Abbès": { home: 900, office: 570 },
-        "Annaba": { home: 900, office: 570 },
-        "Guelma": { home: 850, office: 570 },
-        "Constantine": { home: 850, office: 570 },
-        "Medea": { home: 850, office: 570 },
-        "Mostaganem": { home: 900, office: 570 },
-        "M'Sila": { home: 900, office: 570 },
-        "Mascara": { home: 900, office: 570 },
-        "Ouargla": { home: 1000, office: 670 },
-        "Oran": { home: 850, office: 570 },
-        "El Bayadh": { home: 1100, office: 670 },
-        "Illizi": { home: 0, office: 0 },
-        "Bordj Bou Arreridj": { home: 850, office: 570 },
-        "Boumerdes": { home: 500, office: 420 },
-        "El Tarf": { home: 900, office: 570 },
-        "Tindouf": { home: 0, office: 0 },
-        "Tissemsilt": { home: 900, office: 520 },
-        "El Oued": { home: 1000, office: 670 },
-        "Khenchela": { home: 900, office: 0 },
-        "Souk Ahras": { home: 900, office: 570 },
-        "Tipaza": { home: 800, office: 570 },
-        "Mila": { home: 900, office: 570 },
-        "Ain Defla": { home: 900, office: 570 },
-        "Naama": { home: 1200, office: 670 },
-        "Ain Temouchent": { home: 900, office: 570 },
-        "Ghardaia": { home: 950, office: 670 },
-        "Relizane": { home: 900, office: 570 },
-        "Timimoun": { home: 1450, office: 0 },
-        "Bordj Badji Mokhtar": { home: 0, office: 0 },
-        "Ouled Djellal": { home: 950, office: 670 },
-        "Béni Abbès": { home: 1100, office: 1070 },
-        "In Salah": { home: 1650, office: 0 },
-        "In Guezzam": { home: 1650, office: 0 },
-        "Touggourt": { home: 950, office: 670 },
-        "Djanet": { home: 0, office: 0 },
-        "M'Ghair": { home: 950, office: 0 },
-        "Meniaa": { home: 1100, office: 0 }
-    };
-
-    document.addEventListener('DOMContentLoaded', function() {
-        loadCartFromStorage();
-        updateCartCount();
-
-        // ملء قائمة الولايات مع استبعاد الولايات التي سعرها 0
-        const stateSelect = document.getElementById('state');
-        for (const state in statesData) {
-            if (statesData[state].home > 0 || statesData[state].office > 0) {
-                const option = document.createElement('option');
-                option.value = state;
-                option.textContent = state;
-                stateSelect.appendChild(option);
-            }
-        }
-
-        // تحديث خيارات التوصيل عند اختيار الولاية
-        stateSelect.addEventListener('change', function() {
-            const deliveryOptions = document.getElementById('deliveryOptions');
-            const homeDeliveryDetails = document.getElementById('homeDeliveryDetails');
+    <script>
+        // كود خاص بصفحة الدفع
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCartFromStorage();
+            updateOrderSummary();
             
-            if (this.value && (statesData[this.value].home > 0 || statesData[this.value].office > 0)) {
-                deliveryOptions.style.display = 'block';
-                
-                // تعطيل خيار التوصيل للمنزل إذا كان السعر 0
-                const homeDeliveryOption = document.querySelector('input[value="home"]');
-                homeDeliveryOption.disabled = statesData[this.value].home <= 0;
-                
-                // تعطيل خيار التوصيل للمكتب إذا كان السعر 0
-                const officeDeliveryOption = document.querySelector('input[value="office"]');
-                officeDeliveryOption.disabled = statesData[this.value].office <= 0;
-                
-                // اختيار الخيار المتاح افتراضيًا
-                if (statesData[this.value].office > 0) {
-                    officeDeliveryOption.checked = true;
-                    homeDeliveryDetails.style.display = 'none';
-                } else if (statesData[this.value].home > 0) {
-                    homeDeliveryOption.checked = true;
-                    homeDeliveryDetails.style.display = 'block';
-                }
-                
-                updateDeliveryCost();
-            } else {
-                deliveryOptions.style.display = 'none';
-                homeDeliveryDetails.style.display = 'none';
-            }
-        });
+            // تغيير حقول التوصيل بناءً على طريقة التوصيل المختارة
+            const deliveryMethodRadios = document.querySelectorAll('input[name="deliveryMethod"]');
+            const homeDeliveryFields = document.getElementById('homeDeliveryFields');
+            
+            deliveryMethodRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'home') {
+                        homeDeliveryFields.style.display = 'block';
+                        document.getElementById('commune').required = true;
+                        document.getElementById('address').required = true;
+                    } else {
+                        homeDeliveryFields.style.display = 'none';
+                        document.getElementById('commune').required = false;
+                        document.getElementById('address').required = false;
+                    }
+                    updateDeliveryCost();
+                });
+            });
 
-        // إظهار/إخفاء تفاصيل التوصيل للمنزل
-        document.querySelectorAll('input[name="deliveryType"]').forEach(radio => {
-            radio.addEventListener('change', function() {
-                const homeDeliveryDetails = document.getElementById('homeDeliveryDetails');
-                if (this.value === 'home') {
-                    homeDeliveryDetails.style.display = 'block';
-                } else {
-                    homeDeliveryDetails.style.display = 'none';
-                }
-                updateDeliveryCost();
+            // تحديث تكلفة التوصيل عند تغيير الولاية أو طريقة التوصيل
+            document.getElementById('wilaya').addEventListener('change', updateDeliveryCost);
+            
+            // إرسال النموذج
+            document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitOrder();
             });
         });
 
-        // تحديث تكلفة التوصيل
-        function updateDeliveryCost() {
-            const state = stateSelect.value;
-            const deliveryType = document.querySelector('input[name="deliveryType"]:checked')?.value;
+        // أسعار التوصيل لكل ولاية
+        const deliveryPrices = {
+            "Adrar": { home: 1450, office: 1070 },
+            "Chlef": { home: 850, office: 570 },
+            "Laghouat": { home: 950, office: 670 },
+            "Oum El Bouaghi": { home: 800, office: 570 },
+            "Batna": { home: 900, office: 570 },
+            "Bejaia": { home: 900, office: 570 },
+            "Biskra": { home: 950, office: 670 },
+            "Bechar": { home: 1200, office: 770 },
+            "Blida": { home: 700, office: 520 },
+            "Bouira": { home: 750, office: 570 },
+            "Tamanrasset": { home: 1650, office: 1270 },
+            "Tebessa": { home: 950, office: 570 },
+            "Tlemcen": { home: 900, office: 570 },
+            "Tiaret": { home: 850, office: 520 },
+            "Tizi Ouzou": { home: 750, office: 570 },
+            "Alger": { home: 600, office: 520 },
+            "Djelfa": { home: 950, office: 670 },
+            "Jijel": { home: 900, office: 570 },
+            "Sétif": { home: 850, office: 570 },
+            "Saida": { home: 900, office: 620 },
+            "Skikda": { home: 900, office: 570 },
+            "Sidi Bel Abbès": { home: 900, office: 570 },
+            "Annaba": { home: 900, office: 570 },
+            "Guelma": { home: 850, office: 570 },
+            "Constantine": { home: 850, office: 570 },
+            "Medea": { home: 850, office: 570 },
+            "Mostaganem": { home: 900, office: 570 },
+            "M'Sila": { home: 900, office: 570 },
+            "Mascara": { home: 900, office: 570 },
+            "Ouargla": { home: 1000, office: 670 },
+            "Oran": { home: 850, office: 570 },
+            "El Bayadh": { home: 1100, office: 670 },
+            "Illizi": { home: 0, office: 0 },
+            "Bordj Bou Arreridj": { home: 850, office: 570 },
+            "Boumerdes": { home: 500, office: 420 },
+            "El Tarf": { home: 900, office: 570 },
+            "Tindouf": { home: 0, office: 0 },
+            "Tissemsilt": { home: 900, office: 520 },
+            "El Oued": { home: 1000, office: 670 },
+            "Khenchela": { home: 900, office: 0 },
+            "Souk Ahras": { home: 900, office: 570 },
+            "Tipaza": { home: 800, office: 570 },
+            "Mila": { home: 900, office: 570 },
+            "Ain Defla": { home: 900, office: 570 },
+            "Naama": { home: 1200, office: 670 },
+            "Ain Temouchent": { home: 900, office: 570 },
+            "Ghardaia": { home: 950, office: 670 },
+            "Relizane": { home: 900, office: 570 },
+            "Timimoun": { home: 1450, office: 0 },
+            "Bordj Badji Mokhtar": { home: 0, office: 0 },
+            "Ouled Djellal": { home: 950, office: 670 },
+            "Béni Abbès": { home: 1100, office: 1070 },
+            "In Salah": { home: 1650, office: 0 },
+            "In Guezzam": { home: 1650, office: 0 },
+            "Touggourt": { home: 950, office: 670 },
+            "Djanet": { home: 0, office: 0 },
+            "M'Ghair": { home: 950, office: 0 },
+            "Meniaa": { home: 1100, office: 0 }
+        };
+
+        function updateOrderSummary() {
+            const orderItemsContainer = document.getElementById('orderItems');
+            const subtotalElement = document.getElementById('subtotal');
+            const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
             
-            if (state && deliveryType) {
-                const deliveryCost = statesData[state][deliveryType] || 0;
-                document.getElementById('deliveryCost').textContent = deliveryCost + ' د.ج';
+            let subtotal = 0;
+            orderItemsContainer.innerHTML = '';
+            
+            savedCart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
                 
-                // حساب المجموع الكلي
-                const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
-                const subtotal = savedCart.reduce((total, item) => total + (item.price * item.quantity), 0);
-                document.getElementById('orderSubtotal').textContent = subtotal + ' د.ج';
-                document.getElementById('orderTotal').textContent = (subtotal + deliveryCost) + ' د.ج';
-            }
+                const itemElement = document.createElement('div');
+                itemElement.className = 'summary-row';
+                itemElement.innerHTML = `
+                    <span>${item.name} (${item.quantity} × ${item.price} د.ج)</span>
+                    <span>${itemTotal} د.ج</span>
+                `;
+                orderItemsContainer.appendChild(itemElement);
+            });
+            
+            subtotalElement.textContent = `${subtotal} د.ج`;
+            updateDeliveryCost();
         }
 
-        // إرسال الطلب
-        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
-            e.preventDefault();
+        function updateDeliveryCost() {
+            const deliveryCostElement = document.getElementById('deliveryCost');
+            const totalElement = document.getElementById('total');
+            const subtotal = parseInt(document.getElementById('subtotal').textContent) || 0;
+            const wilaya = document.getElementById('wilaya').value;
+            const deliveryMethod = document.querySelector('input[name="deliveryMethod"]:checked').value;
             
-            // هنا يمكنك إضافة كود لإرسال البيانات إلى الخادم
-            alert('تم استلام طلبك بنجاح! سنتصل بك لتأكيد التفاصيل.');
+            let deliveryCost = 0;
+            
+            if (wilaya && deliveryPrices[wilaya]) {
+                deliveryCost = deliveryPrices[wilaya][deliveryMethod] || 0;
+            }
+            
+            deliveryCostElement.textContent = `${deliveryCost} د.ج`;
+            totalElement.textContent = `${subtotal + deliveryCost} د.ج`;
+        }
+
+        function submitOrder() {
+            const form = document.getElementById('checkoutForm');
+            const formData = new FormData(form);
+            const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
+            const subtotal = parseInt(document.getElementById('subtotal').textContent) || 0;
+            const deliveryCost = parseInt(document.getElementById('deliveryCost').textContent) || 0;
+            const total = subtotal + deliveryCost;
+            
+            // تجميع بيانات الطلب
+            const orderData = {
+                customer: {
+                    firstName: formData.get('firstName'),
+                    lastName: formData.get('lastName'),
+                    phone: formData.get('phone'),
+                    secondaryPhone: formData.get('secondaryPhone')
+                },
+                delivery: {
+                    wilaya: formData.get('wilaya'),
+                    method: formData.get('deliveryMethod'),
+                    commune: formData.get('commune'),
+                    address: formData.get('address')
+                },
+                items: savedCart,
+                prices: {
+                    subtotal: subtotal,
+                    delivery: deliveryCost,
+                    total: total
+                }
+            };
+            
+            // إرسال البيانات إلى ويب هوك
+            sendOrderToDiscord(orderData);
             
             // مسح السلة بعد إتمام الطلب
             localStorage.removeItem('cart');
             updateCartCount();
-            window.location.href = 'index.html';
-        });
-    });
-</script>
+            
+            // إظهار رسالة نجاح (يمكنك توجيه العميل إلى صفحة شكر هنا)
+            alert('تم إرسال طلبك بنجاح! سنتصل بك قريباً لتأكيد التفاصيل.');
+        }
+
+        function sendOrderToDiscord(orderData) {
+            const webhookUrl = 'https://canary.discord.com/api/webhooks/1381563915087122523/5MwmHdsh2tnNr7bfi7QnoZYpN2rayaK2psuOMrQ0CffvPJLUE5pV_ltIy3-0IFcY0RTw';
+            
+            // تنسيق رسالة Discord
+            let itemsText = orderData.items.map(item => 
+                `- ${item.name} (${item.color}، ${item.size}) × ${item.quantity} = ${item.price * item.quantity} د.ج`
+            ).join('\n');
+            
+            let deliveryText = orderData.delivery.method === 'home' ?
+                `التوصيل إلى المنزل
+                البلدية: ${orderData.delivery.commune}
+                العنوان: ${orderData.delivery.address}` :
+                `التوصيل إلى مكتب البريد`;
+            
+            const embed = {
+                title: "طلب جديد 📦",
+                color: 0x0099ff,
+                fields: [
+                    {
+                        name: "معلومات العميل",
+                        value: `الاسم: ${orderData.customer.firstName} ${orderData.customer.lastName}
+                                الهاتف: ${orderData.customer.phone}
+                                الهاتف الاحتياطي: ${orderData.customer.secondaryPhone || 'غير متوفر'}`,
+                        inline: false
+                    },
+                    {
+                        name: "معلومات التوصيل",
+                        value: `الولاية: ${orderData.delivery.wilaya}
+                                ${deliveryText}`,
+                        inline: false
+                    },
+                    {
+                        name: "المنتجات",
+                        value: itemsText,
+                        inline: false
+                    },
+                    {
+                        name: "الفاتورة",
+                        value: `المجموع الجزئي: ${orderData.prices.subtotal} د.ج
+                                تكلفة التوصيل: ${orderData.prices.delivery} د.ج
+                                **المجموع الكلي: ${orderData.prices.total} د.ج**`,
+                        inline: false
+                    }
+                ],
+                timestamp: new Date().toISOString()
+            };
+            
+            fetch(webhookUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    embeds: [embed]
+                })
+            });
+        }
+    </script>
 </body>
 </html>
