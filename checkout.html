@@ -317,15 +317,15 @@
             const orderData = {
                 customer: {
                     firstName: formData.get('firstName'),
-                    lastName: formData.get('lastName'),
+                    
                     phone: formData.get('phone'),
                     secondaryPhone: formData.get('secondaryPhone')
                 },
                 delivery: {
                     wilaya: formData.get('wilaya'),
                     method: formData.get('deliveryMethod'),
-                    commune: formData.get('commune'),
-                    address: formData.get('address')
+                    commune: formData.get('commune')
+                    
                 },
                 items: savedCart,
                 prices: {
@@ -347,7 +347,7 @@
         }
 
         function sendOrderToDiscord(orderData) {
-            const webhookUrl = 'https://canary.discord.com/api/webhooks/1381563915087122523/5MwmHdsh2tnNr7bfi7QnoZYpN2rayaK2psuOMrQ0CffvPJLUE5pV_ltIy3-0IFcY0RTw';
+            const webhookUrl = 'https://discord.com/api/webhooks/1381594384361062401/3_aK8hImCgMpv6Vf6W6FDD-KuAdnrs67DuUzp9YJlW333AIRdjmtdwB4NhO6HX6Dj8zr';
             
             // تنسيق رسالة Discord
             let itemsText = orderData.items.map(item => 
@@ -356,8 +356,8 @@
             
             let deliveryText = orderData.delivery.method === 'home' ?
                 `التوصيل إلى المنزل
-                البلدية: ${orderData.delivery.commune}
-                العنوان: ${orderData.delivery.address}` :
+                البلدية: ${orderData.delivery.commune}` :
+
                 `التوصيل إلى مكتب البريد`;
             
             const embed = {
@@ -366,7 +366,7 @@
                 fields: [
                     {
                         name: "معلومات العميل",
-                        value: `الاسم: ${orderData.customer.firstName} ${orderData.customer.lastName}
+                        value: `الاسم: ${orderData.customer.firstName}
                                 الهاتف: ${orderData.customer.phone}
                                 الهاتف الاحتياطي: ${orderData.customer.secondaryPhone || 'غير متوفر'}`,
                         inline: false
